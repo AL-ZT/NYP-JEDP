@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JavaEE_Project:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaEE_Project_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JavaEE_Project/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaEE_Project" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="PrimeFaces-6.1" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/all-themes-1.0.10.jar" />
+          <element id="library" level="application" name="GlassFish 5.0.0 - JSON Processing (JSR 353)" />
+          <element id="library" level="application" name="GlassFish 5.0.0 - WebSocket" />
+          <element id="library" level="application" name="gson-2.8.3" />
+          <element id="library" level="project" name="com.twilio.sdk:twilio:7.34.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

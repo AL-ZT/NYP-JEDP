@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+    <f:event type="preRenderView" listener="#{listingController.loadListings()}"/>
+</f:metadata>
+
+<h:head>
+    <title>View Listings</title>
+    <style type="text/css">
+        .white-button.ui-button.ui-state-default {
+            background-color: #ffffff;
+            color: #222222;
+            border-color: #d6d6d6;
+        }
+        .white-button.ui-button.ui-state-default:enabled:hover,
+        .white-button.ui-button.ui-state-default:focus {
+            background-color: #f2f2f2;
+            border-color: #ccc;
+            color: #373a3c;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:growl/>
+
+        <p:menubar>
+            <p:menuitem value="Home" icon="ui-icon-home" style="margin-right:10px; margin-left: 10px;"/>
+            <p:menuitem value="About Us" icon="ui-icon-contact" style="margin-right:10px; margin-left: 10px;"/>
+            <p:submenu label="Charity" icon="ui-icon-heart" style="margin-right:10px; margin-left: 10px;">
+                <p:menuitem value="Donation" icon=""/>
+                <p:menuitem value="Volunteer Work" icon=""/>
+                <p:menuitem value="Events" icon=""/>
+                <p:menuitem value="Delivery Service" icon=""/>
+            </p:submenu>
+
+            <f:facet name="options">
+                <p:commandButton type="button" value="Login" icon="ui-icon-person"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+
+    <br/><br/>
+
+    <div class="ui-g">
+        <div class="ui-g-2">
+
+        </div>
+
+        <div class="ui-g-8">
+
+            <div align="right">
+                <p:commandButton action="create_listing" value="Add new item"/>
+            </div>
+            <br/><br/>
+            <p:dataGrid value="#{listingController.listings}" var="tempListing" columns="3" layout="grid"
+                        rows="12" paginator="true" id="cars"
+                        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                        rowsPerPageTemplate="6,12,16">
+
+                <f:facet name="header">
+                    Your items
+                </f:facet>
+
+                <h:form>
+                    <p:panel header="#{tempListing.itemName}" style="text-align:center; font-size: medium">
+                        <h:panelGrid columns="2" bodyrows="4" style="width:100%">
+
+                            <h:outputText value="Item Group: "/>
+                            <h:outputText value="#{tempListing.itemGrp}"/>
+
+                            <h:outputText value="Item Description"/>
+                            <h:outputText value="#{tempListing.itemDesc}"/>
+
+                            <h:outputText value="Item Price"/>
+                            <h:outputText value="$#{tempListing.itemPrice}"/>
+
+                            <h:outputText value="Express Delivery"/>
+                            <h:outputText value="#{tempListing.expDeliv}"/>
+
+                            <!--<p:commandLink update=":form:carDetail" oncomplete="PF('carDialog').show()" title="View Detail">-->
+                            <!--<h:outputText styleClass="pi pi-search" style="margin:0 auto;"/>-->
+                            <!--&lt;!&ndash;<f:setPropertyActionListener value="#{car}" target="#{dataGridView.selectedCar}" />&ndash;&gt;-->
+                            <!--</p:commandLink>-->
+
+                        </h:panelGrid>
+
+                        <h:commandButton value="Update" action="#{listingController.loadListing(tempListing.itemID)}"/>
+                        <h:commandButton value="Delete" action="#{listingController.deleteListing(tempListing.itemID)}"/>
+
+                    </p:panel>
+                </h:form>
+
+            </p:dataGrid>
+        </div>
+
+        <div class="ui-g-2">
+
+        </div>
+    </div>
+
+</h:body>
+</html>

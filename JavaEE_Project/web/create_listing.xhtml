@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Create Listing</title>
+    <style type="text/css">
+        .white-button.ui-button.ui-state-default {
+            background-color: #ffffff;
+            color: #222222;
+            border-color: #d6d6d6;
+        }
+        .white-button.ui-button.ui-state-default:enabled:hover,
+        .white-button.ui-button.ui-state-default:focus {
+            background-color: #f2f2f2;
+            border-color: #ccc;
+            color: #373a3c;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:growl/> <!-- id="messages"-->
+
+        <p:menubar>
+            <p:menuitem value="Home" icon="ui-icon-home" style="margin-right:10px; margin-left: 10px;"/>
+            <p:menuitem value="About Us" icon="ui-icon-contact" style="margin-right:10px; margin-left: 10px;"/>
+            <p:submenu label="Charity" icon="ui-icon-heart" style="margin-right:10px; margin-left: 10px;">
+                <p:menuitem value="Donation" icon=""/>
+                <p:menuitem value="Volunteer Work" icon=""/>
+                <p:menuitem value="Events" icon=""/>
+                <p:menuitem value="Delivery Service" icon=""/>
+            </p:submenu>
+
+            <f:facet name="options">
+                <p:commandButton type="button" value="Login" icon="ui-icon-person"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+
+    <br/><br/>
+
+    <div class="ui-g">
+        <div class="ui-g-2">
+
+        </div>
+
+        <div class="ui-g-8">
+            <h:form>
+                <p:panel header="Create Listing" style="margin-bottom: 20px">
+
+                    <!--<h:outputLabel>Item picture (Optional): </h:outputLabel>-->
+                    <!--<h:form>-->
+                    <!--<p:fileUpload mode="advanced" dragDropSupport="false"-->
+                    <!--update="messages" sizeLimit="10000000" fileLimit="3" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />-->
+
+                    <!--<p:growl id="messages" showDetail="true" />-->
+                    <!--</h:form>-->
+
+                    <br/><br/>
+
+                    <h:outputLabel>Item name:</h:outputLabel>
+                    <p:inputText value="#{listing.itemName}" style="width: 100%"
+                                 placeholder="Enter the name of your item"/>
+
+                    <br/>
+
+                    <div class="ui-g">
+                        <div class="ui-g-4">
+                            <h:outputLabel>Item Group:</h:outputLabel>
+                            <p:selectOneMenu value="#{listing.itemGrp}" style="width: 90%">
+                                <f:selectItem itemLabel="Select Group" itemValue=""/>
+                                <f:selectItem itemLabel="Food" itemValue="food"/>
+                                <f:selectItem itemLabel="Medicine" itemValue="medicine"/>
+                                <f:selectItem itemLabel="Basic necessities" itemValue="basic"/>
+                                <f:selectItem itemLabel="Others" itemValue="others"/>
+                            </p:selectOneMenu>
+                        </div>
+
+                        <div class="ui-g-4">
+                            <h:outputLabel>Price:</h:outputLabel>
+                            <br/>
+                            <p:inputNumber value="#{listing.itemPrice}" style="width: 100%"
+                                           placeholder="Price charged"/>
+                        </div>
+
+                        <div class="ui-g-4">
+                            <h:outputLabel>Express Delivery:</h:outputLabel>
+                            <br/>
+                            <p:inputSwitch value="#{listing.expDeliv}">
+                                <p:ajax listener="#{selectBooleanView.addMessage}"/>
+                            </p:inputSwitch>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <!--<h:outputLabel>Address:</h:outputLabel>-->
+                    <!--<img alt="This is fake" src="/resources/fakemap.jpg" style="height: auto; width: 100%"></img>-->
+
+                    <br/><br/>
+
+                    <h:outputLabel>Description:</h:outputLabel>
+                    <p:inputTextarea value="#{listing.itemDesc}" rows="5" cols="100"
+                                     placeholder="Enter a short description of your item or any important details"/>
+
+                    <br/>
+
+                    <div align="right">
+                        <p:commandButton action="#{listingController.addListing(listing)}" value="Post item"/>
+                    </div>
+
+                </p:panel>
+            </h:form>
+        </div>
+
+        <div class="ui-g-2">
+
+        </div>
+    </div>
+
+    <!--for medicine, location of hospital-->
+    <!--button for adding more than 1 item-->
+
+
+</h:body>
+</html>

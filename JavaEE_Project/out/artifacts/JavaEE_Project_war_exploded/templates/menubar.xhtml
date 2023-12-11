@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jstl/core">
+<ui:component>
+    <h:form>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="donation.xhtml">Donation</a></li>
+            <li><a href="#!">Volunteer Work</a></li>
+            <li><a href="#!">Events</a></li>
+            <c:if test="#{not empty user.email}">
+                <li><a href="delivery.xhtml">Delivery Service</a></li>
+            </c:if>
+        </ul>
+
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="edit_account_settings.xhtml">Account Settings</a></li>
+            <li><h:commandLink value="Logout" action="#{user.logoutUser}"/></li>
+        </ul>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo" style="margin-left: 1%;"><i class="material-icons">favorite</i>CaringHearts</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.xhtml"><i class="material-icons left">home</i> Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Charity<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <c:if test="#{not empty user.email}">
+                        <li><a href="userDashboard.xhtml">User Dashboard</a></li>
+                    </c:if>
+                    <c:if test="#{empty user.email}">
+                        <li><a href="login.xhtml">Login</a></li>
+                    </c:if>
+                    <c:if test="#{not empty user.email}">
+                        <li><a class="dropdown-trigger" href=""
+                               data-target="dropdown2">#{user.firstName} #{user.lastName} <i
+                                class="material-icons left">perm_identity</i></a></li>
+                    </c:if>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.xhtml">Home</a></li>
+            <li><a href="#!">Donation</a></li>
+            <li><a href="#!">Volunteer Work</a></li>
+            <li><a href="#!">Events</a></li>
+            <li><a href="#!">Delivery Service</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">User Dashboard</a></li>
+            <c:if test="#{empty user.email}">
+                <li><a href="login.xhtml">Login</a></li>
+            </c:if>
+            <c:if test="#{not empty user.email}">
+                <li><a href="edit_account_settings.xhtml">Account Settings</a></li>
+                <li><h:commandLink value="Logout" action="#{user.logoutUser}"/></li>
+            </c:if>
+        </ul>
+
+    </h:form>
+</ui:component>
+
+</html>

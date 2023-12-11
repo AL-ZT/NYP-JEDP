@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+    <!-- CSS for position of footer  -->
+
+    <title>Home Page</title>
+</h:head>
+<h:body>
+    <h:form id="form">
+        <p:growl id="messages1"/>
+
+        <p:menubar>
+            <p:menuitem value="Home" icon="ui-icon-home" style="margin-right:10px; margin-left: 10px;"/>
+            <p:menuitem value="About Us" icon="ui-icon-contact" style="margin-right:10px; margin-left: 10px;"/>
+            <p:submenu label="Charity" icon="ui-icon-heart" style="margin-right:10px; margin-left: 10px;">
+                <p:menuitem value="Donation" icon=""/>
+                <p:menuitem value="Volunteer Work" icon=""/>
+                <p:menuitem value="Events" icon=""/>
+                <p:menuitem value="Delivery Service" icon=""/>
+            </p:submenu>
+        </p:menubar>
+
+    </h:form>
+    <br/>
+    <br/>
+    <br/>
+    <p:growl id="Create_Volunteer_Work" showDetail="true" />
+
+    <h:form enctype="multipart/form-data">
+        <p:panel header="Update #{volunteer.event_name} Event" style="margin:auto;width:80%; height:600px;">
+            <div class="ui-g ui-lg ui-md">
+
+                <h:panelGrid cellpadding="10" style="width:100%;">
+                    <h:outputText
+                            value="Volunteer Event Name:" />
+                    <h:inputText style="width:100%" value="#{volunteer.event_name}" id="event_name"/>
+                </h:panelGrid>
+
+
+                <h:panelGrid style="width:100%;" cellpadding="10">
+                    <h:outputText
+                            value="Event target:" />
+                    <h:inputText style="width:100%" value="#{volunteer.event_target}" id="event_target"/>
+                </h:panelGrid>
+
+            </div>
+
+            <div class="ui-g ui-lg ui-md">
+                <div class="ui-g-3 ui-lg-3 ui-md-3" align="center">
+                    <h:panelGrid style="width:100%;" cellpadding="10">
+                        <h:outputText value="Event date:"/>
+                        <p:calendar id="datetime" value="#{volunteer.event_date}" pattern="yyyy/MM/dd HH:mm:ss" />
+                    </h:panelGrid>
+                </div>
+
+
+
+
+
+
+                <div class="ui-g-5 ui-lg-5 ui-md-5" align="center">
+                    <h:panelGrid style="width:100%;" cellpadding="10">
+                        <h:outputText
+                                value="Enter group category:" />
+                        <h:inputText style="width:100%" value="#{volunteer.group_category}" id="group_category" />
+                    </h:panelGrid>
+                </div>
+
+                <div class="ui-g-4 ui-lg-4 ui-md-4" align="center">
+                    <h:panelGrid style="width:100%;" cellpadding="10">
+                        <h:outputText
+                                value="Enter event type:" />
+                        <p:graphicImage value="#{volunteer.actualImage}">
+                            <f:param name="item_id" value="#{volunteer.id}" />
+                        </p:graphicImage>
+                    </h:panelGrid>
+
+                </div>
+            </div>
+            <h:inputHidden value="#{volunteer.id}" />
+            <h:outputLabel /> <h:commandButton value="Submit" action="#{volunteerController.updateVolunteer(volunteer)}" icon="pi pi-check"/>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

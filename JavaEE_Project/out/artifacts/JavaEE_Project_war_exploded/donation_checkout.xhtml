@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>
+        Donation - Checkout Page
+    </title>
+    <h:outputStylesheet>
+        html, body {
+            height: 100%;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .form_resize {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .form_resize {
+                width: 100%;
+            }
+        }
+
+        .ui-panel {
+            width: 100%;
+        }
+
+    </h:outputStylesheet>
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:menubar>
+            <p:menuitem value="Home" icon="ui-icon-home" action="index?faces-redirect=true" style="margin-right:10px; margin-left: 10px;"/>
+            <p:menuitem value="About Us" icon="ui-icon-contact" style="margin-right:10px; margin-left: 10px;"/>
+            <p:submenu label="Charity" icon="ui-icon-heart" style="margin-right:10px; margin-left: 10px;">
+                <p:menuitem value="Donation" action="donation?faces-redirect=true" icon=""/>
+                <p:menuitem value="Volunteer Work" icon=""/>
+                <p:menuitem value="Events" icon=""/>
+                <p:menuitem value="delivery Service" icon=""/>
+            </p:submenu>
+
+            <f:facet name="options">
+                <p:commandButton value="Login" icon="ui-icon-person" action="login?faces-redirect=true"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+
+    <br/>
+    <br/>
+
+    <div style="display: flex; justify-content: center;">
+        <h:form class="form_resize">
+            <br/>
+            <p:panel header="Donation" style="margin-bottom:20px">
+                <br/>
+                <h:panelGrid cellpadding="10" style="width: 100%">
+                    <h:outputText value="Donation Event : Charity Drive 1"/>
+                    <h:outputLabel for="name" value="Full name as per NRIC/Passport : "/>
+                    <p:inputText id="name" placeholder="Enter Your Name" style="width: 100%;"/>
+                    <h:outputLabel for="nric" value="Identification Number : "/>
+                    <p:inputText id="nric" placeholder="Enter Your NRIC" style="width: 100%;"/>
+                    <p:outputLabel for="email" value="Email Address"/>
+                    <p:inputText id="email" placeholder="Enter Your Email" style="width: 100%;"/>
+                    <h:outputLabel for="donation_amount" value="Donation Amount : "/>
+                    <p:spinner id="donation_amount" prefix="$" min="0"/>
+                </h:panelGrid>
+
+                <br/>
+                <div style="width:100%; text-align: center">
+                    <p:button value="Donate"/>
+                </div>
+                <br/>
+            </p:panel>
+        </h:form>
+    </div>
+
+
+</h:body>
+
+</html>

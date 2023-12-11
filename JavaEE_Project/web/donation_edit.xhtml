@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jstl/core">
+<h:head>
+    <title>Home Page</title>
+</h:head>
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="body">
+        <br/>
+        <br/>
+        <h:form id="form" enctype="multipart/form-data">
+            <p:fieldset legend="Edit Donation Event" style="margin-bottom:20px">
+
+                <p:messages id="messages" showDetail="true" closable="true">
+
+                </p:messages>
+                <h:outputText value="Name of Event : "/>
+                <br/><br/>
+                <p:inputText id="tbEvent" value="#{donationController.edit_donation.name}" style="width: 200px" required="true"
+                             requiredMessage="Name of event is required!"/>
+                <br/>
+                <h:message for="tbEvent" style="color: red;"/>
+                <br/><br/>
+
+                <h:outputText value="Type"/>
+                <br/><br/>
+                <p:selectOneMenu id="Type" value="#{donationController.edit_donation.type}" style="width: 200px" required="true"
+                                 requiredMessage="Please select a catergory!">
+                    <f:selectItem itemLabel="Select One"/>
+                    <f:selectItem itemLabel="Animal Welfare" itemValue="Animal Welfare"/>
+                    <f:selectItem itemLabel="Education" itemValue="Education"/>
+                    <f:selectItem itemLabel="Humantarian" itemValue="Humantarian"/>
+                </p:selectOneMenu>
+                <br/>
+                <h:message for="Type" style="color: red"/>
+                <br/><br/>
+
+                <h:outputText value="Goal : "/>
+                <br/><br/>
+                <p:inputNumber id="tbGoal" value="#{donationController.edit_donation.goal}" required="true"
+                               validatorMessage="Minimum amount must be more than $5!">
+                    <f:validateDoubleRange minimum="5"/>
+                </p:inputNumber>
+                <br/>
+                <h:message for="tbGoal" style="color: red"/>
+                <br/><br/>
+
+                <h:outputText value="Starting Date : "/>
+                <br/><br/>
+                <p:calendar id="startbutton" showOn="button" value="#{donationController.edit_donation.date_start}" pattern="yyyy-MM-dd"
+                            required="true" requiredMessage="Please enter the starting date of the event!"/>
+                <br/>
+                <h:message for="startbutton" style="color: red"/>
+                <br/><br/>
+
+                <h:outputText value="Ending Date : "/>
+                <br/><br/>
+                <p:calendar id="endbutton" showOn="button" value="#{donationController.edit_donation.date_end}" pattern="yyyy-MM-dd"
+                            required="true" requiredMessage="Please enter the ending date of the event!"/>
+                <br/>
+                <h:message for="endbutton" style="color: red"/>
+                <br/><br/>
+
+                <h:outputText value="Event Image : "/>
+                <br/><br/>
+                <p:fileUpload mode="simple" value="#{donationController.edit_donation.event_image}" skinSimple="true" required="true" requiredMessage="Event needs an image!"/>
+                <br/><br/>
+                <br/>
+
+                <h:outputText value="Description of Event : "/>
+                <br/><br/>
+                <p:inputTextarea id="tbDescription" value="#{donationController.edit_donation.description}" rows="10" cols="100" required="true"
+                                 requiredMessage="Please enter the event's description!"/>
+                <br/>
+                <h:message for="tbDescription" style="color: red"/>
+                <br/><br/>
+                <h:inputHidden value="#{donationController.edit_donation.id}"/>
+                <p:commandButton value="Submit" id="submitButton" style="margin-right:20px;"
+                                 action="#{donationController.updateEvent(donationController.edit_donation)}" update="form" ajax="false"/>
+
+            </p:fieldset>
+
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+
+
+</html>

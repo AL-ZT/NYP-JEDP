@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Home Page</title>
+</h:head>
+<ui:composition template="templates/commonLayout.xhtml">
+    <style>
+        .waves-button-input {
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <ui:define name="body">
+        <br/>
+        <br/>
+        <h:form>
+            <div class="container">
+                <div class="card">
+                    <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="First Name : " />
+                                <h:inputText value="#{user.firstName}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Last Name : " />
+                                <h:inputText value="#{user.lastName}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Email : " />
+                                <h:inputText value="#{user.email}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Password : " />
+                                <h:inputText value="#{user.password}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Phone Number : " />
+                                <h:inputText value="#{user.phoneNumber}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Date Of Birth : " />
+                                <h:inputText value="#{user.dateOfBirth}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <h:outputLabel value="Gender : " />
+                                <h:inputText value="#{user.gender}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p:selectBooleanCheckbox value="#{user.newRequestAlert}" itemLabel="Alert When Someone Sends An Invitation To Deliver Your Request" />
+                        </div>
+                        <div class="row">
+                            <p:selectBooleanCheckbox value="#{user.requestChangesAlert}" itemLabel="Alert When Someone Modified/Deleted An Accepted Request Schedule" />
+                        </div>
+                        <div class="row">
+                            <h:commandButton styleClass="waves-effect waves-light btn" value="Submit" action="#{userController.updateUser(user)}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+
+
+</html>

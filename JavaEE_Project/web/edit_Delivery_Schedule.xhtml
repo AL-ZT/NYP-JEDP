@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="head">
+        <title>Edit Delivery</title>
+    </ui:define>
+    <ui:define name="body">
+        <style>
+            .waves-button-input {
+                color: white;
+            }
+        </style>
+        <h:body>
+            <h:form id="editDelivery">
+                <div class="container">
+                    <div class="card">
+                        <div class="container">
+                            <br/>
+                            <div class="row" align="center">
+                                <h4>Edit Schedule</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field">
+                                        <h:outputLabel for="date" value="Date Of Delivery :" />
+                                        <h:inputText id="date" value="#{deliveryScheduleOptions.deliveryDate}" styleClass="datepicker active" required="true" requiredMessage="Please Select a Date to Reschedule Delivery!" validator="#{deliveryScheduleOptions.dateValidation}">
+                                            <f:convertDateTime pattern="dd/MM/yyyy" />
+                                        </h:inputText>
+                                        <h:message for="date" style="color: red;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field">
+                                        <h:outputLabel for="time" value="Time Of Delivery :" />
+                                        <h:inputText id="time" value="#{deliveryScheduleOptions.deliveryTime}" styleClass="timepicker" required="true" requiredMessage="Please Select a timing to Reschedule Delivery!">
+                                            <f:convertDateTime pattern="HH:mm" timeZone="GMT+7:30" />
+                                        </h:inputText>
+                                        <h:message for="time" style="color: red;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field">
+                                        <h:outputLabel for="comments" value="Any Additional Notes : " />
+                                        <h:inputText a:placeholder="(optional)" id="comments" value="#{deliveryScheduleOptions.additionalComments}" styleClass="active" />
+                                    </div>
+                                </div>
+                            </div>
+                            <ui:fragment rendered="#{deliveryScheduleOptions.deliveryStatus == 1}">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <p><i class="fa fa-exclamation-triangle"></i> Note : Rescheduling A Request with An Accepted Status Will Notify the Recipient and Reset to "Pending" Status.</p>
+                                    </div>
+                                </div>
+                            </ui:fragment>
+                            <div class="row">
+                                <div class="col s12">
+                                    <h:commandButton value="Submit Schedule" action="#{deliveryScheduleOptions.editDeliverySchedule(deliveryScheduleOptions)}" style="margin-right:20px;" styleClass="waves-effect waves-light btn-small" />
+                                </div>
+                            </div>
+
+                            <h:inputHidden value="#{deliveryScheduleOptions.id}" /><h:inputHidden value="#{deliveryScheduleOptions.deliveryStatus}" /><h:inputHidden value="#{deliveryScheduleOptions.deliveryId}" /><h:inputHidden value="#{deliveryScheduleOptions.delivererId}" /><h:inputHidden value="#{deliveryScheduleOptions.recipientId}" />
+
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+
+            <h:outputScript>
+                $(document).ready(function(){
+                    $('.datepicker').datepicker({
+                        format : "dd/mm/yyyy"
+                    });
+                    $('.timepicker').timepicker({
+                        twelveHour : false
+                    });
+                    M.updateTextFields();
+                });
+            </h:outputScript>
+
+        </h:body>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+	<f:event type="preRenderView" listener="#{contactController.loadContacts()}"/>
+</f:metadata>
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Simple Contact Manager</title>
+	<h:outputStylesheet library="css" name="style.css"/>
+
+	<style>
+		.ui-growl {
+			left:50px;
+			top:70px;
+		}
+	</style>
+</h:head>
+
+<h2>Simple Contact Manager</h2>
+
+<h:body>
+	<p:growl id="appMsg" for="appMessage"  showDetail="true" sticky="false" life="2000"/>
+	<h:form id="contactList">
+		<h:panelGrid>
+			<p:dataTable id="contactMgr"
+						 var="contact"
+						 widgetVar="contactsTable"
+						 value="#{contactController.contactList}"
+						 emptyMessage="No contacts found with given criteria"
+						 filteredValue="#{contactController.filteredContacts}"
+						 selectionMode="single"
+						 selection="#{contactController.selectedContact}"
+						 paginator="true"
+						 rows="10"
+						 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						 rowsPerPageTemplate="10,20,30"
+						 rowKey="#{contact.id}"
+						 scrollable="true" scrollHeight="250">
+
+				<f:facet name="header">
+					<p:outputPanel>
+						<h:outputText value="Search all fields:"/>
+						<p:inputText id="globalFilter" onkeyup="PF('contactsTable').filter()" style="width:150px" placeholder="Any"/>
+					</p:outputPanel>
+				</f:facet>
+
+				<p:column filterBy="#{contact.familyName}" filterMatchMode="contains" sortBy="#{contact.familyName}" headerText="Family Name">
+					<h:outputText value="#{contact.familyName}"/>
+				</p:column>
+
+				<p:column filterBy="#{contact.givenName}" filterMatchMode="contains" sortBy="#{contact.givenName}" headerText="Given Name">
+					<h:outputText value="#{contact.givenName}"/>
+				</p:column>
+
+				<p:column filterBy="#{contact.contactNum}" filterMatchMode="contains" sortBy="#{contact.contactNum}" headerText="Contact Number">
+					<h:outputText value="#{contact.contactNum}"/>
+				</p:column>
+
+				<p:column filterBy="#{contact.email}" filterMatchMode="contains" sortBy="#{contact.email}" headerText="Email Address">
+					<h:outputText value="#{contact.email}"/>
+				</p:column>
+
+				<p:ajax event="rowSelect" update="contactDetailForm" listener="#{contactController.onRowSelect}"/>
+			</p:dataTable>
+			<p:contextMenu for="contactMgr">
+				<p:menuitem value="Delete" update="contactMgr contactDetailForm appMsg"
+							icon="ui-icon-close"
+							actionListener="#{contactController.deleteContact}"
+							oncomplete="PF('contactsTable').filter()"/>
+			</p:contextMenu>
+
+		</h:panelGrid>
+	</h:form>
+	<br/>
+
+
+	<h:form id="contactDetailForm">
+
+		<p:panel id="contactDetailPanel" header="Contact Details">
+			<p:panelGrid styleClass="ui-noborder">
+				<h:inputHidden value="#{contact.id}"/>
+				<p:row>
+					<p:column><p:outputLabel for="givenName" value="Given Name:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.givenName}" required="true" requiredMessage="Given name is required"
+									 size="35"
+									 id="givenName"/>
+						<p:message for="givenName" id="givenNameMsg" display="text" />
+					</p:column>
+
+					<p:column><p:outputLabel value="Family Name:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.familyName}"
+									 size="35"
+									 id="familyName"/>
+					</p:column>
+				</p:row>
+				<p:row>
+					<p:column><p:outputLabel value="Contact Number:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.contactNum}"
+									 label="Contact Number"
+									 size="15"
+									 id="contactNumber" />
+					</p:column>
+
+					<p:column><p:outputLabel value="Email:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.email}"
+									 label="Contact Number"
+									 size="35"
+									 id="email"
+									 validatorMessage="Invalid email format">
+							<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+						</p:inputText>
+						<p:message for="email" />
+					</p:column>
+				</p:row>
+
+				<p:row>
+					<p:column><p:outputLabel value="Address:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.address}"
+									 size="40"
+									 id="address"/>
+					</p:column>
+
+					<p:column><p:outputLabel value="Postal Code:"/></p:column>
+					<p:column>
+						<p:inputText value="#{contact.postalCode}"
+									 label="Contact Number"
+									 size="5"
+									 maxlength="6"
+									 id="postalCode">
+							<p:keyFilter regEx="/[\d\-\.]/" />
+						</p:inputText>
+					</p:column>
+				</p:row>
+
+				<p:row>
+					<p:column>
+						<p:commandButton value="Save"
+										 update="contactDetailForm contactList appMsg"
+										 actionListener="#{contactController.saveContact(contact)}"
+										 oncomplete="PF('contactsTable').filter()"/>
+						<p:commandButton value="Clear" update="contactDetailForm" process="@this" actionListener="#{contactController.clearContact}"/>
+					</p:column>
+				</p:row>
+			</p:panelGrid>
+		</p:panel>
+	</h:form>
+
+
+</h:body>
+
+
+
+</html>

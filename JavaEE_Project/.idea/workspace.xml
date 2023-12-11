@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaEE_Project:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="JavaEE_Project" />
+    </loaded-modules>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/delivery_requests" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="473cfa21-a322-490c-947e-144e4f0447e0" name="Default" comment="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <change afterPath="$PROJECT_DIR$/src/Donation/Donators.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/donation_event.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/css/flipclock.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/css/jquery.lineProgressbar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/667cc31054f26f26d5e349d09248315811bba50c74f19bfdb6c36c44c39a955file.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/90668e6a93490691281948ca44f686594072faf616ee8242dd74831e248daf5a10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/c3c78e3de0ab99985bfabef06580cf0eeb7dd5f21ac414234b8a9a1b6a69416potato.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/event.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/fcd34e02547190763e90a4cdaddc60035312512ab0ac2080d07936b23fdcf2ecpotato.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/section-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/js/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/js/flipclock.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/js/jquery.lineProgressbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaEE_Project_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaEE_Project_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaEE_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaEE_Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deliveries/DashboardSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deliveries/DashboardSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deliveries/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deliveries/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deliveries/DeliveryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deliveries/DeliveryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deliveries/DeliveryScheduleOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deliveries/DeliveryScheduleOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deliveries/DeliverySearchFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deliveries/DeliverySearchFilters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Donation/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Donation/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Donation/DonationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Donation/DonationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ProjectDbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ProjectDbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/delivery.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/delivery.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/donation.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/donation.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/donation_add.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/donation_add.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/donation_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/donation_edit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/donation_view.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/edit_account_settings.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/edit_account_settings.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/images/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/images/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/event.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/images/default.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/event2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/images/event2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/medicine-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/commonLayout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/commonLayout.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/footer.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/menubar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/menubar.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userDashboard.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/userDashboard.xhtml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/../Test/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="javaee_project@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="javaee_project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="javaee_project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="javaee_project: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Deliveries/DashboardSchedule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2783">
+              <caret line="146" column="59" selection-start-line="146" selection-start-column="59" selection-end-line="146" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2931#2932#0" expanded="true" />
+                <element signature="e#2975#2976#0" expanded="true" />
+                <element signature="e#3197#3198#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
+                <element signature="e#3510#3511#0" expanded="true" />
+                <element signature="e#3560#3561#0" expanded="true" />
+                <element signature="e#6228#6229#0" expanded="true" />
+                <element signature="e#6272#6273#0" expanded="true" />
+                <element signature="e#6339#6340#0" expanded="true" />
+                <element signature="e#6379#6380#0" expanded="true" />
+                <element signature="e#6570#6571#0" expanded="true" />
+                <element signature="e#6603#6604#0" expanded="true" />
+                <element signature="e#6642#6643#0" expanded="true" />
+                <element signature="e#6670#6671#0" expanded="true" />
+                <element signature="e#6719#6720#0" expanded="true" />
+                <element signature="e#6753#6754#0" expanded="true" />
+                <element signature="e#7022#7023#0" expanded="true" />
+                <element signature="e#7085#7086#0" expanded="true" />
+                <element signature="e#7311#7312#0" expanded="true" />
+                <element signature="e#7386#7387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/delivery.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2530">
+              <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliveryScheduleOptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1265">
+              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4787#4788#0" expanded="true" />
+                <element signature="e#4835#4836#0" expanded="true" />
+                <element signature="e#5045#5046#0" expanded="true" />
+                <element signature="e#5093#5094#0" expanded="true" />
+                <element signature="e#6054#6055#0" expanded="true" />
+                <element signature="e#6102#6103#0" expanded="true" />
+                <element signature="e#6776#6777#0" expanded="true" />
+                <element signature="e#6808#6809#0" expanded="true" />
+                <element signature="e#7422#7423#0" expanded="true" />
+                <element signature="e#7470#7471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/userDashboard.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10925">
+              <caret line="475" column="96" selection-start-line="475" selection-start-column="96" selection-end-line="475" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliveryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="jsf" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>scheduleView</find>
+      <find>ease-in</find>
+      <find>html</find>
+      <find>dateOfBirth</find>
+      <find>set</find>
+      <find>carDetail</find>
+      <find>previewDialog</find>
+      <find>tabView</find>
+      <find>growl</find>
+      <find>class</find>
+      <find>delivery</find>
+      <find>deliveryQueries</find>
+      <find>searchWdatatable</find>
+      <find>test</find>
+      <find>isAccepted</find>
+      <find>Accepted</find>
+      <find>update</find>
+      <find>dashboardDialogs</find>
+      <find>name</find>
+      <find>p:commandLink</find>
+      <find>hide()</find>
+      <find>window.location.href</find>
+      <find>window.location.href = '</find>
+      <find>modal2</find>
+      <find>modal1</find>
+      <find>commandLin</find>
+      <find>dashboardDial</find>
+      <find>previewDelivery</find>
+      <find>profileView</find>
+      <find>alert</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>DeliverySearchFilters</replace>
+      <replace>#</replace>
+      <replace>add</replace>
+      <replace>dashboardSchedule</replace>
+      <replace>linear</replace>
+      <replace>DOB</replace>
+      <replace>accepted</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/delivery.xhtml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Delivery/DeliveryQueries.java" />
+        <option value="$PROJECT_DIR$/src/Delivery/DeliverySearchFilters.java" />
+        <option value="$PROJECT_DIR$/src/Delivery/DeliveryController.java" />
+        <option value="$PROJECT_DIR$/src/DB/User.java" />
+        <option value="$PROJECT_DIR$/src/DB/ProjectDbUtil.java" />
+        <option value="$PROJECT_DIR$/src/delivery/DeliveryController.java" />
+        <option value="$PROJECT_DIR$/web/addDelivery.xhtml" />
+        <option value="$PROJECT_DIR$/web/registerForDelivery.xhtml" />
+        <option value="$PROJECT_DIR$/src/Deliveries/selectItemTypeRing.java" />
+        <option value="$PROJECT_DIR$/web/deliverySelect.xhtml" />
+        <option value="$PROJECT_DIR$/src/Deliveries/deliveryScheduleOptions.java" />
+        <option value="$PROJECT_DIR$/src/Donation/Donation.java" />
+        <option value="$PROJECT_DIR$/src/Donation/DonationController.java" />
+        <option value="$PROJECT_DIR$/web/donation_add.xhtml" />
+        <option value="$PROJECT_DIR$/web/donation_edit.xhtml" />
+        <option value="$PROJECT_DIR$/web/login.xhtml" />
+        <option value="$PROJECT_DIR$/web/create_listing.xhtml" />
+        <option value="$PROJECT_DIR$/src/listings/Listing.java" />
+        <option value="$PROJECT_DIR$/src/listings/ListingController.java" />
+        <option value="$PROJECT_DIR$/src/listings/ListingDbUtil.java" />
+        <option value="$PROJECT_DIR$/web/update_listing.xhtml" />
+        <option value="$PROJECT_DIR$/web/user_view_listing.xhtml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef51c092-5251-4dc9-a08e-f4588e0a3f09/console.sql" />
+        <option value="$PROJECT_DIR$/web/register.xhtml" />
+        <option value="$PROJECT_DIR$/web/resources/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Chat/ChatRoomServer.java" />
+        <option value="$PROJECT_DIR$/web/templates/commonLayout.xhtml" />
+        <option value="$PROJECT_DIR$/web/templates/menubar.xhtml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f827dc23-a149-4734-ab25-21543edbbd3b/console_1.sql" />
+        <option value="$PROJECT_DIR$/src/Deliveries/DeliverySearchFilters.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/Chat/ChatRoomServer.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/Chat/Chat.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/Chat/ChatTokenCreator.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/SMSAlerts.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f827dc23-a149-4734-ab25-21543edbbd3b/console.sql" />
+        <option value="$PROJECT_DIR$/web/donation.xhtml" />
+        <option value="$PROJECT_DIR$/src/Deliveries/DeliveryQueries.java" />
+        <option value="$PROJECT_DIR$/src/database/UserController.java" />
+        <option value="$PROJECT_DIR$/web/add_Delivery_Schedule.xhtml" />
+        <option value="$PROJECT_DIR$/src/Deliveries/DeliveryScheduleOptions.java" />
+        <option value="$PROJECT_DIR$/web/edit_account_settings.xhtml" />
+        <option value="$PROJECT_DIR$/src/Deliveries/ProfileView.java" />
+        <option value="$PROJECT_DIR$/web/edit_Delivery_Schedule.xhtml" />
+        <option value="$PROJECT_DIR$/src/database/User.java" />
+        <option value="$PROJECT_DIR$/src/database/ProjectDbUtil.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/Alerts.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/DeliveryController.java" />
+        <option value="$PROJECT_DIR$/src/Deliveries/DashboardSchedule.java" />
+        <option value="$PROJECT_DIR$/web/delivery.xhtml" />
+        <option value="$PROJECT_DIR$/web/userDashboard.xhtml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" value="" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1310" />
+    <option name="height" value="1105" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Deliveries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Donation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaEE_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaEE_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548649571746" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ContactManager-SDL" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.14742269" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Deliveries" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Deliveries" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources\fonts" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources\css" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Delivery" />
+      <recent name="DB" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources\images" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources\js" />
+      <recent name="C:\Users\ashle\IdeaProjects\JavaEE_Project\web\resources\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="GlassFish Server.Payara 5.184.0">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GlassFish 5.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/JavaEE/index.xhtml" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="JavaEE_Project:war exploded">
+          <settings>
+            <option name="contextRoot" value="/JavaEE" />
+            <option name="defaultContextRoot" value="false" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="false" />
+          <option name="SCRIPT" value="D:/glassfish5/glassfish/bin/asadmin.bat" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="start-domain -v domain1" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JavaEE_Project:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Payara 5.184.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Payara 5.184.0" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/JavaEEProject/index.xhtml" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="JavaEE_Project:war exploded">
+          <settings>
+            <option name="contextRoot" value="/JavaEEProject" />
+            <option name="defaultContextRoot" value="false" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="false" />
+          <option name="SCRIPT" value="D:/payara5/glassfish/bin/asadmin.bat" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="start-domain -v domain1" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JavaEE_Project:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
+      <item itemvalue="GlassFish Server.Payara 5.184.0" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="473cfa21-a322-490c-947e-144e4f0447e0" name="Default" comment="" />
+      <created>1541340978911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541340978911</updated>
+      <workItem from="1541340980503" duration="127000" />
+      <workItem from="1541341133436" duration="1358000" />
+      <workItem from="1541510214640" duration="8028000" />
+      <workItem from="1541644770410" duration="4474000" />
+      <workItem from="1541650536013" duration="2297000" />
+      <workItem from="1541655951564" duration="4066000" />
+      <workItem from="1541682174974" duration="78000" />
+      <workItem from="1541682273516" duration="6492000" />
+      <workItem from="1541758521213" duration="1426000" />
+      <workItem from="1541822456242" duration="3019000" />
+      <workItem from="1541851735487" duration="7188000" />
+      <workItem from="1541902014990" duration="1809000" />
+      <workItem from="1541921341394" duration="15152000" />
+      <workItem from="1542251410604" duration="5407000" />
+      <workItem from="1542264921649" duration="1068000" />
+      <workItem from="1542361716697" duration="2893000" />
+      <workItem from="1542436735454" duration="5803000" />
+      <workItem from="1542511752104" duration="3646000" />
+      <workItem from="1542794570829" duration="2712000" />
+      <workItem from="1542856247997" duration="5277000" />
+      <workItem from="1542952975460" duration="10774000" />
+      <workItem from="1542975430401" duration="7301000" />
+      <workItem from="1542989303334" duration="329000" />
+      <workItem from="1543150504692" duration="2865000" />
+      <workItem from="1543405737051" duration="1277000" />
+      <workItem from="1543467122441" duration="318000" />
+      <workItem from="1543473549321" duration="3867000" />
+      <workItem from="1543496257546" duration="8664000" />
+      <workItem from="1543928846546" duration="650000" />
+      <workItem from="1544064351014" duration="7731000" />
+      <workItem from="1544075586083" duration="7164000" />
+      <workItem from="1544098551718" duration="5243000" />
+      <workItem from="1544148512979" duration="7314000" />
+      <workItem from="1544277721527" duration="5594000" />
+      <workItem from="1544314868071" duration="9124000" />
+      <workItem from="1544615248050" duration="14291000" />
+      <workItem from="1544670141464" duration="5547000" />
+      <workItem from="1544681757287" duration="5740000" />
+      <workItem from="1545027453372" duration="16262000" />
+      <workItem from="1545574608039" duration="926000" />
+      <workItem from="1545619491870" duration="5195000" />
+      <workItem from="1545878904059" duration="6327000" />
+      <workItem from="1545915064782" duration="5368000" />
+      <workItem from="1545965760681" duration="16663000" />
+      <workItem from="1546050333372" duration="11783000" />
+      <workItem from="1546082524143" duration="6075000" />
+      <workItem from="1546142520274" duration="22037000" />
+      <workItem from="1546188507427" duration="866000" />
+      <workItem from="1546227694827" duration="3198000" />
+      <workItem from="1546261375220" duration="9867000" />
+      <workItem from="1546312266863" duration="3394000" />
+      <workItem from="1546345409125" duration="613000" />
+      <workItem from="1546411089217" duration="9285000" />
+      <workItem from="1546483644413" duration="7553000" />
+      <workItem from="1546499271477" duration="19894000" />
+      <workItem from="1546532204060" duration="455000" />
+      <workItem from="1546567098377" duration="7764000" />
+      <workItem from="1546582660834" duration="1198000" />
+      <workItem from="1546601098788" duration="605000" />
+      <workItem from="1546663191699" duration="13646000" />
+      <workItem from="1546758910325" duration="10957000" />
+      <workItem from="1546832968733" duration="15343000" />
+      <workItem from="1546922349112" duration="2834000" />
+      <workItem from="1546929086633" duration="2167000" />
+      <workItem from="1546950602775" duration="4717000" />
+      <workItem from="1546957563257" duration="3538000" />
+      <workItem from="1547003582801" duration="2934000" />
+      <workItem from="1547017554288" duration="3567000" />
+      <workItem from="1547088538474" duration="3633000" />
+      <workItem from="1547175814762" duration="4992000" />
+      <workItem from="1547215061216" duration="11402000" />
+      <workItem from="1547264340432" duration="3872000" />
+      <workItem from="1547304324610" duration="1493000" />
+      <workItem from="1547389145139" duration="315000" />
+      <workItem from="1547390049114" duration="1224000" />
+      <workItem from="1547391339360" duration="1246000" />
+      <workItem from="1547694755447" duration="3124000" />
+      <workItem from="1547700432489" duration="2048000" />
+      <workItem from="1547723232541" duration="5803000" />
+      <workItem from="1547791088886" duration="7569000" />
+      <workItem from="1547877389485" duration="824000" />
+      <workItem from="1547887365458" duration="21428000" />
+      <workItem from="1547976346488" duration="683000" />
+      <workItem from="1548244498318" duration="2678000" />
+      <workItem from="1548258217805" duration="8510000" />
+      <workItem from="1548297412231" duration="7612000" />
+      <workItem from="1548317684158" duration="2512000" />
+      <workItem from="1548327094014" duration="8803000" />
+      <workItem from="1548387703043" duration="26539000" />
+      <workItem from="1548440451056" duration="152000" />
+      <workItem from="1548481713801" duration="8122000" />
+      <workItem from="1548503138131" duration="19338000" />
+      <workItem from="1548555817863" duration="21528000" />
+      <workItem from="1548594609051" duration="14194000" />
+      <workItem from="1548640424656" duration="8878000" />
+      <workItem from="1548652896797" duration="4234000" />
+      <workItem from="1548762741103" duration="7611000" />
+      <workItem from="1548818179537" duration="1224000" />
+      <workItem from="1548820463084" duration="1297000" />
+      <workItem from="1548824252929" duration="1676000" />
+      <workItem from="1549002060225" duration="10000" />
+    </task>
+    <task id="LOCAL-00001" summary="push">
+      <created>1541511867496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541511867496</updated>
+    </task>
+    <task id="LOCAL-00002" summary="push">
+      <created>1541516615585</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541516615585</updated>
+    </task>
+    <task id="LOCAL-00003" summary="minor change">
+      <created>1541685783855</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541685783855</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1541826909659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541826909659</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1542361782222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542361782222</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1544066217420</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544066217420</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545030440260</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545030440260</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545031280539</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545031280539</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545031349383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545031349383</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545032584056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545032584056</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545032835133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545032835133</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1545038551898</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545038551898</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1546321274059</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1546321274059</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1546422317763</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1546422317763</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1546422396170</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546422396170</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml">
+      <created>1546422418191</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1546422418191</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="615718000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49305555" visible="true" weight="0.2852349" />
+      <window_info id="Structure" order="1" sideWeight="0.5069444" side_tool="true" weight="0.25100672" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Web" order="6" sideWeight="0.50441176" side_tool="true" weight="0.26442954" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32794118" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.3985294" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" auto_hide="true" id="Run" order="5" sideWeight="0.49328858" weight="0.33382353" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.32794118" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5067114" side_tool="true" weight="0.32352942" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32794118" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32205883" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32794118" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49932885" weight="0.32794118" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32794118" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32794118" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.24966443" />
+      <window_info anchor="right" id="Database" order="4" weight="0.28120807" />
+      <window_info anchor="right" id="CDI" order="5" weight="0.3295302" />
+      <window_info anchor="right" id="JSF" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.3295302" />
+      <window_info anchor="right" id="Maven" order="11" weight="0.3295302" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push" />
+    <MESSAGE value="minor change" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ALZT/JavaEE_Project&#10;&#10;# Conflicts:&#10;#&#9;web/index.xhtml" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/out/production/JavaEE_Project/Deliveries/DeliveryController.class" />
+    <entry file="jar://D:/glassfish5/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/module/web/util/el/ForwardingMethodExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#733#734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/JavaEE_Project/Deliveries/SMSAlerts.class" />
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/SMSAlerts.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="347" selection-start-line="347" selection-end-line="347" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/reflect/generics/factory/CoreReflectionFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/twilio-7.33.1-sources.jar!/com/twilio/type/PhoneNumber.java" />
+    <entry file="file://$PROJECT_DIR$/src/Donation/Donation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Donation/DonationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="208" column="40" lean-forward="true" selection-start-line="208" selection-start-column="40" selection-end-line="208" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaEE_Project.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/default.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/event2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/event.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/donation_event.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4738">
+          <caret line="206" column="19" lean-forward="true" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/donation_add.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="81" column="67" lean-forward="true" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/donation.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/primefaces-6.1.jar!/META-INF/primefaces-p.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="4040" column="8" selection-start-line="4040" selection-start-column="8" selection-end-line="4040" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/donationlist">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/primefaces-6.1-sources.jar!/org/primefaces/event/SelectEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JSF/lib/jsf-support.jar!/resources/schemas/ee7/tld/jsf-ui.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="184" column="4" selection-start-line="184" selection-start-column="4" selection-end-line="184" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="117" column="9" lean-forward="true" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/donation_edit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliverySearchFilters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1553#1554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/fcd34e02547190763e90a4cdaddc60035312512ab0ac2080d07936b23fdcf2ecpotato.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/c3c78e3de0ab99985bfabef06580cf0eeb7dd5f21ac414234b8a9a1b6a69416potato.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/90668e6a93490691281948ca44f686594072faf616ee8242dd74831e248daf5a10.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/section-background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliveryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2183#2184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/add_Delivery_Schedule.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/667cc31054f26f26d5e349d09248315811bba50c74f19bfdb6c36c44c39a955file.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/edit_account_settings.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/images/large.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="232" column="5" lean-forward="true" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1709#1710#0" expanded="true" />
+            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+            <element signature="e#2558#2559#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2733#2734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/ProfileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="36" column="92" lean-forward="true" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3365#3366#0" expanded="true" />
+            <element signature="e#3403#3404#0" expanded="true" />
+            <element signature="e#3466#3467#0" expanded="true" />
+            <element signature="e#3520#3521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/Alerts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="89" column="59" lean-forward="true" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/edit_Delivery_Schedule.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="66" column="124" selection-start-line="66" selection-start-column="124" selection-end-line="66" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/ProjectDbUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="667" column="29" lean-forward="true" selection-start-line="667" selection-start-column="29" selection-end-line="667" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/create_listing.xhtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f827dc23-a149-4734-ab25-21543edbbd3b/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/user_delivery_schedules">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/user_ratings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f827dc23-a149-4734-ab25-21543edbbd3b/schema/javaee_project/table/delivery_requests">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/DashboardSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2783">
+          <caret line="146" column="59" selection-start-line="146" selection-start-column="59" selection-end-line="146" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2931#2932#0" expanded="true" />
+            <element signature="e#2975#2976#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#3560#3561#0" expanded="true" />
+            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6339#6340#0" expanded="true" />
+            <element signature="e#6379#6380#0" expanded="true" />
+            <element signature="e#6570#6571#0" expanded="true" />
+            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="e#6642#6643#0" expanded="true" />
+            <element signature="e#6670#6671#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+            <element signature="e#6753#6754#0" expanded="true" />
+            <element signature="e#7022#7023#0" expanded="true" />
+            <element signature="e#7085#7086#0" expanded="true" />
+            <element signature="e#7311#7312#0" expanded="true" />
+            <element signature="e#7386#7387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/delivery.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2530">
+          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliveryScheduleOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4787#4788#0" expanded="true" />
+            <element signature="e#4835#4836#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5093#5094#0" expanded="true" />
+            <element signature="e#6054#6055#0" expanded="true" />
+            <element signature="e#6102#6103#0" expanded="true" />
+            <element signature="e#6776#6777#0" expanded="true" />
+            <element signature="e#6808#6809#0" expanded="true" />
+            <element signature="e#7422#7423#0" expanded="true" />
+            <element signature="e#7470#7471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/userDashboard.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10925">
+          <caret line="475" column="96" selection-start-line="475" selection-start-column="96" selection-end-line="475" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deliveries/DeliveryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>JavaEE_Project:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-5.1.47-bin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JavaEE_Project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.twilio.sdk:twilio:7.34.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
+  </component>
+</project>

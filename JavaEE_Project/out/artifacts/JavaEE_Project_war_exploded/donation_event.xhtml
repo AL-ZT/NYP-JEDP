@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="head">
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+        <!--Clock-->
+        <h:outputStylesheet library="css" name="flipclock.css"/>
+        <h:outputScript library="js" name="flipclock.min.js"/>
+        <!--Goal-->
+        <h:outputStylesheet library="css" name="jquery.lineProgressbar.min.css"/>
+        <h:outputScript library="js" name="jquery.lineProgressbar.js"/>
+        <!--Materialize-->
+        <h:outputStylesheet library="css" name="materialize.min.css"/>
+        <h:outputScript library="js" name="materialize.min.js"/>
+        <!--Paypal-->
+        <!--<h:outputScript library="js" name="checkout.js" />-->
+        <script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js">
+        </script>
+        <!--Donations Table-->
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{donationController.loadDonatorList(donationController.view_donation.id)}" />
+        </f:metadata>
+    </ui:define>
+    <ui:define name="body">
+        <h:body>
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <div class="col s12">
+                            <div class="card horizontal">
+                                <div class="card-image">
+                                    <p:graphicImage value="resources/images/#{donationController.view_donation.filename}"/>
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <h:outputText value="Event Name : #{donationController.view_donation.name}"/>
+                                        <br/><br/>
+                                        <h:outputText value="Event type : #{donationController.view_donation.type}"/>
+                                        <br/><br/><br/>
+                                        <h:outputText value="#{donationController.view_donation.noOfDonors} donors"/>
+                                        <br/>
+                                        <h:outputText
+                                                value="$#{donationController.view_donation.current_Amount} out of $#{donationController.view_donation.goal} raised"/>
+                                        <div id="goal" style="color: black;"></div>
+                                        <br/>
+                                        <h:outputText value="Time left :"/>
+                                        <div style="display: flex; justify-content: center; width: 100%">
+                                            <div class="clock"
+                                                 style="margin:3em;width: 100%;display: flex; justify-content: center"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-g-12">
+                        <ul class="collapsible">
+                            <li class="active">
+                                <div class="collapsible-header">Description</div>
+                                <div class="collapsible-body"><span>#{donationController.view_donation.description}</span></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">List of Donors</div>
+                                <div class="collapsible-body">
+                                    <h2>Top Donators</h2>
+                                    <h:form>
+                                        <p:dataTable var="donator" value="#{donationController.donators}" rows="10"
+                                                     paginator="true"
+                                                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                                     rowsPerPageTemplate="5,10,15">
+
+                                            <p:column headerText="Name">
+                                                <h:outputText value="#{donator.name}" />
+                                            </p:column>
+
+                                            <p:column headerText="Date">
+                                                <h:outputText value="#{donator.date_donated}" />
+                                            </p:column>
+
+                                            <p:column headerText="Amount Donated">
+                                                <h:outputText value="SGD #{donator.donation_amount}" />
+                                            </p:column>
+
+                                        </p:dataTable>
+                                    </h:form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">Donate Today!</div>
+                                <div class="collapsible-body">
+                                    <h:form>
+                                        Donation amount :<h:inputText styleClass="donateAmountSend" value="#{donationController.donation_amt}" />
+                                        <div id="paypal-button"></div>
+                                        <h:commandButton style="display:none" styleClass="finishPaying" value="Submit" action="#{donationController.addDonationAmount(user.firstName,user.lastName)}" />
+                                    </h:form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!--Description-->
+                <!--<div class="ui-g-12">-->
+                <!--<div class="ui-g-12">-->
+                <!--<p:fieldset legend="Description" style="margin-bottom:20px">-->
+                <!--<br/>-->
+                <!--<h:outputText value="#{donationController.view_donation.description}"/>-->
+                <!--<br/><br/>-->
+                <!--<div class="ui-g-12" style="text-align: right">-->
+                <!---->
+                <!--</div>-->
+                <!--</p:fieldset>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--Previous Pic & Description-->
+                <!--<div class="ui-g">-->
+                <!--<div class="ui-g-12 ui-md-12 ui-lg-6" style="text-align: center; vertical-align: center">-->
+                <!--<p:graphicImage value="resources/event.jpg" style="height: auto; width: 100%;"/>-->
+                <!--</div>-->
+                <!--<div class="ui-g-6 ui-md-12 ui-lg-6">-->
+                <!--<div class="ui-g">-->
+                <!--<div class="ui-g-12">-->
+                <!--<h:outputText value="Event Name : #{donationController.view_donation.name}"/>-->
+                <!--<br/><br/>-->
+                <!--<h:outputText value="Event type : #{donationController.view_donation.type}"/>-->
+                <!--<br/><br/><br/>-->
+                <!--<h:outputText value="#{donationController.view_donation.noOfDonors} donors" />-->
+                <!--<br/>-->
+                <!--<h:outputText value="$#{donationController.view_donation.current_Amount} out of $#{donationController.view_donation.goal} raised" />-->
+                <!--</div>-->
+                <!--<div class="ui-g-12">-->
+                <!--<div id="goal" style="color: black;"></div>-->
+                <!--</div>-->
+                <!--<h:outputText value="Time left :"/>-->
+                <!--<br/>-->
+                <!--<div class="ui-g-12" style="display: flex; justify-items: center">-->
+                <!--<div class="clock" style="margin:3em;width: 100%;display: flex; justify-content: center"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+            <h:outputScript>
+                var clock;
+                $(document).ready(function() {
+                //Timer
+                var currentDate = new Date();
+                var futureDate = new Date("#{donationController.view_donation.date_end}");
+                futureDate.setHours(0,0,0);
+                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+                if (currentDate > futureDate) {
+                diff = 0;
+                }
+                clock = $('.clock').FlipClock(diff, {
+                clockFace: 'DailyCounter',
+                countdown: true
+                });
+                //Goal
+                var percentage = (parseInt("#{donationController.view_donation.current_Amount}") / parseInt("#{donationController.view_donation.goal}") * 100);
+                if (percentage >= 100) {
+                    percentage = 100;
+                }
+                $('#goal').LineProgressbar({
+                percentage : percentage,
+                ShowProgressCount : true
+                })
+                });
+                //Paypal
+                paypal.Button.render({
+                // Configure environment
+                env: 'sandbox',
+                client: {
+                sandbox: 'ASv2jw1EhAlJMuhRS-SaCQeo-5q-E8aMYJDE8foadBtCThKyQr3oYWhoZ1gB8c7Msd7Ah03j_OH2qqDt',
+                production: 'demo_production_client_id'
+                },
+                // Customize button (optional)
+                locale: 'en_US',
+                style: {
+                size: 'large',
+                color: 'gold',
+                shape: 'pill',
+                },
+
+                // Enable Pay Now checkout flow (optional)
+                commit: true,
+
+                // Set up a payment
+                payment: function(data, actions) {
+                console.log($(".donateAmountSend").val());
+                return actions.payment.create({
+                transactions: [{
+                amount: {
+                total: $(".donateAmountSend").val(),
+                currency: 'SGD'
+                }
+                }]
+                });
+                },
+                // Execute the payment
+                onAuthorize: function(data, actions) {
+                return actions.payment.execute().then(function() {
+                // Show a confirmation message to the buyer
+                window.alert('Thank you for your donation!');
+                $('.finishPaying').trigger('click');
+                });
+                }
+                }, '#paypal-button');
+                //Collapsable
+                $('.collapsible').collapsible();
+            </h:outputScript>
+        </h:body>
+    </ui:define>
+</ui:composition>
+
+</html>

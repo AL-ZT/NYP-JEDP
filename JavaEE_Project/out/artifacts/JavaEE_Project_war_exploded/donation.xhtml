@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jstl/core">
+<f:metadata>
+    <f:event type="preRenderView" listener="#{donationController.loadDonations()}"/>
+</f:metadata>
+
+<h:head>
+    <title>
+        Donations
+    </title>
+    <h:outputStylesheet>
+        html, body {
+            height: 100%;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </h:outputStylesheet>
+</h:head>
+
+<ui:composition template="templates/commonLayout.xhtml">
+    <ui:define name="body">
+        <h:body>
+            <br/>
+            <br/>
+            <div class="ui-g">
+                <div class="ui-g-6" style="display:flex; align-items: center">
+                    <h:form style="display:flex; align-items: center">
+                        <h:outputLabel value="Type :  " for="type" style="margin-right: 5px"/>
+                        <p:selectOneMenu id="type" style="width:150px" value="#{donationController.donation_type}">
+                            <f:selectItem itemValue="" itemLabel="All"/>
+                            <f:selectItem itemValue="Animal Welfare" itemLabel="Animal Welfare"/>
+                            <f:selectItem itemValue="Education" itemLabel="Education"/>
+                            <f:selectItem itemValue="Humantarian" itemLabel="Humantarian"/>
+                        </p:selectOneMenu>
+                        <p:commandButton value="Sort" action="#{donationController.sortEvents()}"
+                                         style="margin-left: 20px"/>
+                    </h:form>
+                </div>
+                <div class="ui-g-6">
+                    <c:if test="#{user.adminStatus == true}">
+                        <h:form style="width: 100%;display: flex;justify-content: flex-end">
+                            <p:commandButton value="Add Donation Event" id="addEvent" action="donation_add"/>
+                        </h:form>
+                    </c:if>
+                </div>
+            </div>
+
+            <br/>
+            <br/>
+
+            <div class="ui-g">
+                <ui:repeat value="#{donationController.donations}" var="donation">
+                    <div class="ui-g-12">
+                        <p:fieldset legend="#{donation.name}" style="margin-bottom:20px;">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <p:graphicImage value="resources/images/#{donation.filename}"
+                                                style="height: 200px; width: 300px"/>
+                                <h:outputText
+                                        value="#{donation.description}"/>
+                            </h:panelGrid>
+
+                            <div style="display: flex; justify-content: flex-end">
+                                <p:commandButton value="View More"
+                                                 action="#{donationController.viewDonationEvent(donation.id)}"/>
+                                <c:if test="#{user.adminStatus == true}">
+                                    <h:form>
+                                        <p:commandButton value="Edit Event"
+                                                         action="#{donationController.loadEvent(donation.id)}"
+                                                         style="margin-left:20px "/>
+                                    </h:form>
+                                    <p:commandButton value="Delete Event"
+                                                     action="#{donationController.deleteDonationEvent(donation.id)}"
+                                                     style="margin-left: 20px "/>
+                                </c:if>
+                            </div>
+                        </p:fieldset>
+                    </div>
+                </ui:repeat>
+            </div>
+
+
+        </h:body>
+    </ui:define>
+</ui:composition>
+</html>

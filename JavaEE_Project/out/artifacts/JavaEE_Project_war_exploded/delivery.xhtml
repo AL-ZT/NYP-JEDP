@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jstl/core">
+
+<f:metadata>
+	<f:event type="preRenderView" listener="#{deliveryController.loadRequests(deliverySearchFilters, user)}" />
+</f:metadata>
+
+<ui:composition template="templates/commonLayout.xhtml">
+        <ui:define name="head">
+            <title>Delivery Requests</title>
+            <style type="text/css">
+                .white-button.ui-button.ui-state-default {
+                    background-color: #ffffff;
+                    color: #222222;
+                    border-color: #d6d6d6;
+                }
+
+                .white-button.ui-button.ui-state-default:enabled:hover,
+                .white-button.ui-button.ui-state-default:focus {
+                    background-color: #f2f2f2;
+                    border-color: #ccc;
+                    color: #373a3c;
+                }
+
+                .waves-button-input {
+                    color: white;
+                    cursor: pointer;
+                }
+            </style>
+        </ui:define>
+
+    <ui:define name="body">
+            <h:body>
+                <br/><br/>
+                <h:form id="searchWdatatable">
+                    <p:growl id="postRequestMessage"/>
+
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s2">
+                            <h:selectOneMenu id="location" value="#{deliverySearchFilters.locationSearch}" style="width:125px; margin-bottom:20px">
+                                <f:selectItem itemLabel="Select One" itemValue="" />
+                                <f:selectItem itemLabel="Yishun" itemValue="Yishun" />
+                                <f:selectItem itemLabel="Sembawang" itemValue="Sembawang" />
+                                <f:selectItem itemLabel="Woodlands" itemValue="Woodlands" />
+                                <f:selectItem itemLabel="Hougang" itemValue="Hougang" />
+                            </h:selectOneMenu>
+                            <h:outputLabel value="Location : " />
+                        </div>
+                        <div class="input-field col s2">
+                            <h:selectOneMenu id="itemType" value="#{deliverySearchFilters.itemTypeSearch}" style="width:125px ;margin-bottom:20px">
+                                <f:selectItem itemLabel="Select One" itemValue="" />
+                                <f:selectItem itemLabel="Medicine" itemValue="Medicine" />
+                                <f:selectItem itemLabel="Food" itemValue="Food" />
+                                <f:selectItem itemLabel="Necessities" itemValue="Necessities" />
+                                <f:selectItem itemLabel="Others" itemValue="Others" />
+                            </h:selectOneMenu>
+                            <h:outputLabel value="Item Type : " />
+                        </div>
+                        <div class="input-field col s2">
+                            <h:outputLabel value="Keyword : " />
+                            <h:inputText id="keyword" value="#{deliverySearchFilters.keywordSearch}" />
+                        </div>
+                        <div class="input-field col s2">
+                            <h:outputText value="Quick Delivery " />
+                            <p:inputSwitch value="#{deliverySearchFilters.quickDeliverySearch}" />
+                        </div>
+                        <div class="input-field col s2">
+                            <h:commandButton styleClass="waves-effect waves-light btn" value="Search" action="#{deliveryController.clickedOnSearch}" />
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+
+                    <br/>
+                    <br/>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <ui:repeat value="#{deliveryController.subRequests}" var="tempRequestList">
+                                    <div class="row card z-depth-2 valign-wrapper" style="height: 150px;">
+                                        <div class="col s12 valign-wrapper">
+                                            <div class="col s12 m3" align="center">
+                                                <img class="responsive-img circle" src="resources/images/#{tempRequestList.itemPicPath}" style="width: 130px; height: 130px;" />
+                                            </div>
+                                            <div class="col s12 m6" align="center">
+                                                <span class="left">#{tempRequestList.itemName}</span>
+                                                <span class="new badge left teal" data-badge-caption="#{tempRequestList.itemType}" />
+                                                <span class="new badge left green" data-badge-caption="#{tempRequestList.location}" />
+                                                <ui:fragment rendered="#{tempRequestList.quickDelivery == false}">
+                                                    <span class="new badge left" data-badge-caption="No Quick Delivery" />
+                                                </ui:fragment>
+                                                <ui:fragment rendered="#{tempRequestList.quickDelivery == true}">
+                                                    <span class="new badge left red" data-badge-caption="Quick Delivery" />
+                                                </ui:fragment>
+                                            </div>
+                                            <div class="col s6 m1" align="center">
+                                                <p:commandLink update="previewRequest" actionListener="#{deliveryController.previewRequest(tempRequestList)}"><i class="modal-trigger fa fa-eye tooltipped" data-target="modal1" data-position="top" data-tooltip="Preview Request" style="cursor: pointer;"></i></p:commandLink>
+                                            </div>
+                                            <div class="col s6 m2" align="center">
+                                                <h:commandButton styleClass="waves-effect waves-light btn-small" value="Request" action="#{deliveryController.selectRequest(tempRequestList)}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ui:repeat>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <ul class="pagination">
+                                <ui:fragment rendered="#{deliveryController.selectedPage == 1}">
+                                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                                </ui:fragment>
+                                <ui:fragment rendered="#{deliveryController.selectedPage != 1}">
+                                    <li class="waves-effect"><h:commandLink action="#{deliveryController.decrementPage}"><i class="material-icons">chevron_left</i></h:commandLink></li>
+                                </ui:fragment>
+                                <ui:repeat value="#{deliveryController.pageSize}" var="tempPageNumber">
+                                    <ui:fragment rendered="#{deliveryController.selectedPage == tempPageNumber}">
+                                        <li class="active"><h:commandLink action="#{deliveryController.changePage(tempPageNumber)}">#{tempPageNumber}</h:commandLink></li>
+                                    </ui:fragment>
+                                    <ui:fragment rendered="#{deliveryController.selectedPage != tempPageNumber}">
+                                        <li class="waves-effect"><h:commandLink action="#{deliveryController.changePage(tempPageNumber)}">#{tempPageNumber}</h:commandLink></li>
+                                    </ui:fragment>
+                                </ui:repeat>
+                                <ui:fragment rendered="#{deliveryController.selectedPage == deliveryController.integerPageSize}">
+                                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                                </ui:fragment>
+                                <ui:fragment rendered="#{deliveryController.selectedPage != deliveryController.integerPageSize}">
+                                    <li class="waves-effect"><h:commandLink action="#{deliveryController.incrementPage}"><i class="material-icons">chevron_right</i></h:commandLink></li>
+                                </ui:fragment>
+                            </ul>
+                        </div>
+                    </div>
+                </h:form>
+
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h:form id="previewRequest">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col s6">
+                                            <img class="responsive-img circle" src="resources/images/#{deliveryController.selectedRequest.itemPicPath}" style="width: 230px; height: 230px;" />
+                                        </div>
+                                        <div class="col s6" align="center">
+                                            <div class="row">
+                                                <h4>#{deliveryController.selectedRequest.name}</h4>
+                                            </div>
+                                            <br/>
+                                            <div class="row">
+                                                <span>Address to Be Delivered To : #{deliveryController.selectedRequest.address}</span>
+                                            </div>
+                                            <div class="row">
+                                                <span>Item : #{deliveryController.selectedRequest.itemName}</span>
+                                            </div>
+                                            <div class="row">
+                                                <span>Description of Item : #{deliveryController.selectedRequest.itemDesc}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+
+                <h:outputScript>
+                    $(document).ready(function(){
+                        $('.modal').modal();
+                        $('.datepicker').datepicker({
+                            format : "dd/mm/yyyy"
+                        });
+                        $('.tooltipped').tooltip();
+                        $('select').formSelect();
+                    });
+                </h:outputScript>
+
+            </h:body>
+        </ui:define>
+</ui:composition>
+
+</html>
